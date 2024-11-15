@@ -29,7 +29,7 @@ type TeamProps = {
   name: string;
   designation: string;
   description: string;
-  img: string;
+  img: any;
   link: string;
 };
 
