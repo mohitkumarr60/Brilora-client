@@ -1,9 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Loader from "../components/Loader";
 import Heading from "../utils/Heading";
 import Header from "../components/Header";
-import { FaRegFaceSmileBeam } from "react-icons/fa6";
 import Footer from "../components/Footer";
 
 type Props = {};

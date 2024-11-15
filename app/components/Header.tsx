@@ -150,13 +150,12 @@ const Header: FC<Props> = ({ activeItem, route, open, setRoute, setOpen }) => {
             }}
             id="screen"
           >
-            <div className="w-3/4 fixed z-[100] right-0 bg-white h-screen">
-              {/* code connect logo and avatar for sidebar */}
-              <div className="flex items-center w-full">
+            <div className="w-3/4 fixed z-[100] right-0 bg-white/90 backdrop-blur h-screen">
+              <div className="flex items-center w-full p-5">
                 {user ? (
                   <Link href={"/profile"}>
                     <div
-                      className={`flex items-center justify-center w-10 h-10 border rounded-full ${
+                      className={`flex items-center justify-center w-12 h-12 border bg-white rounded-full ${
                         activeItem === 5 && "shadow border-violet-600"
                       }`}
                     >
@@ -217,11 +216,11 @@ const Header: FC<Props> = ({ activeItem, route, open, setRoute, setOpen }) => {
                 Copyright © 2024 Brilora. Designed and Developed by
                 <span>
                   <Link
-                    href={"https://www.linkedin.com/in/mohit-saroha/"}
+                    href={"/team"}
                     className="text-violet-600"
                   >
                     {" "}
-                    Mohit Saroha
+                    Our Team
                   </Link>
                 </span>
               </p>

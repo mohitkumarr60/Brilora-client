@@ -47,16 +47,16 @@ const Hero: FC<Props> = () => {
         <SimpleLoader />
       ) : (
         <div
-          className={`flex w-full h-[95vh] bg-gradient-to-tr from-cyan-200 via-violet-300 to-violet-400 relative`}
+          className={`flex w-full h-screen md:h-[95vh] bg-gradient-to-tr from-cyan-200 via-violet-300 to-violet-400 relative`}
         >
           <div className="container m-auto flex">
             <div className="w-full">
-              <h1 className="text-[120px] font-bold text-center">{title}</h1>
-              <h4 className="text-6xl font-medium text-center">{subTitle}</h4>
+              <h1 className="text-6xl md:text-[120px] font-bold text-center">{title}</h1>
+              <h4 className="text-2xl md:text-6xl font-medium text-center">{subTitle}</h4>
               <br />
-              <p>{text}</p>
+              <p className="px-5 text-center">{text}</p>
 
-              <div className="bg-gradient-to-tr to-indigo-400 from-violet-400 p-2 rounded-full max-w-[600px] m-auto mt-20">
+              <div className="bg-gradient-to-tr to-indigo-400 from-violet-400 p-2 rounded-full max-w-[600px] m-auto my-20 mx-5 md:mx-0 md:my-0 md:mt-20">
                 <div className="search-container">
                   <input
                     className="input"
@@ -80,7 +80,7 @@ const Hero: FC<Props> = () => {
             </div>
           </div>
           <div
-            className="absolute bottom-20 left-[50%] -translate-x-[50%] hover:bottom-16 transition-all duration-200 cursor-pointer"
+            className="absolute bottom-20 left-[50%] -translate-x-[50%] hover:bottom-16 transition-all duration-200 cursor-pointer hidden md:block"
             onClick={handleScreenScroll}
           >
             <IoArrowDownCircleOutline
