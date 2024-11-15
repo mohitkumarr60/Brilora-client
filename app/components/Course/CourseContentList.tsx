@@ -11,10 +11,10 @@ import CourseProgress from "./CourseProgress";
 type Props = {
   data: any;
   id?: string;
-  activeVideo: number;
+  activeVideo?: number;
   setActiveVideo?: any;
   isDemo?: boolean;
-  user: any;
+  user?: any;
 };
 
 const CourseContentList: FC<Props> = ({
@@ -152,19 +152,19 @@ const CourseContentList: FC<Props> = ({
                       >
                         {!isDemo && (
                           <div className="flex mb-1 items-center">
-                              {modules?.includes(item._id) ? (
-                                <MdCheckBox
-                                  size={22}
-                                  className="mr-2 text-black"
-                                  onClick={() => handleMarkIncomplete(item._id)}
-                                />
-                              ) : (
-                                <MdCheckBoxOutlineBlank
-                                  size={22}
-                                  className="mr-2 text-black"
-                                  onClick={() => handleMarkComplete(item._id)}
-                                />
-                              )}
+                            {modules?.includes(item._id) ? (
+                              <MdCheckBox
+                                size={22}
+                                className="mr-2 text-black"
+                                onClick={() => handleMarkIncomplete(item._id)}
+                              />
+                            ) : (
+                              <MdCheckBoxOutlineBlank
+                                size={22}
+                                className="mr-2 text-black"
+                                onClick={() => handleMarkComplete(item._id)}
+                              />
+                            )}
                           </div>
                         )}
                         <span>
